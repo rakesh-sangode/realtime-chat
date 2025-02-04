@@ -2,6 +2,7 @@
 {% load django_htmx %}
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -12,7 +13,7 @@
     <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
     <script src="https://unpkg.com/htmx.org@2.0.2"></script>
     {% django_htmx_script %}
-    <script src="https://unpkg.com/hyperscript.org@0.9.12"></script>
+    <script src="https://unpkg.com/hyperscript.org@0.9.14"></script>
     <script src="https://cdn.tailwindcss.com"></script>
     <style type="text/tailwindcss">
         [x-cloak] { 
@@ -105,8 +106,9 @@
         .alert-danger { @apply bg-red-600 }
     </style>
 </head>
+
 <body hx-headers='{"X-CSRFToken": "{{ csrf_token }}"}' class="{% block class %}{% endblock %}">
-	
+
     {% include 'includes/messages.html' %}
 
     {% include 'includes/header.html' %}
@@ -117,4 +119,5 @@
     {% block javascript %}{% endblock %}
 
 </body>
+
 </html>
