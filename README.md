@@ -1,63 +1,59 @@
-#### Video Tutorial for this project
-https://youtu.be/SQ4A7Q6_md8
-<br><br>
+# Real-Time Chat Application
 
-#### Getting the files
-Download zip file<br> 
-or <br>
-git clone command (need git to be installed) and remove git folder afterwards
+This is a real-time chat application built with Django. It allows users to communicate with each other in real-time through a web interface.
+
+## Features
+
+- Real-time messaging: Users can send and receive messages instantly using WebSocket.
+- User authentication: Secure login and registration system.
+- Chat rooms: Users can create and join multiple chat rooms.
+- User profiles: Users can update their profile information.
+- Responsive design: Works on both desktop and mobile devices.
+
+## WebSocket Integration
+
+This project uses WebSocket to enable real-time messaging between users. WebSocket allows for full-duplex communication channels over a single TCP connection, making it ideal for real-time applications like chat.
+
+## Clone the project
+
 ```
-git clone https://github.com/andyjud/django-starter.git . && rm -rf .git
+https://github.com/rakesh-sangode/realtime-chat.git
 ```
-<br><br><br>
 
 ## Setup
 
-#### - Create Virtual Environment
-###### # Mac
+### Create Virtual Environment
+
+#### Mac
+
 ```
 python3 -m venv venv
 source venv/bin/activate
 ```
 
-###### # Windows
+#### Windows
+
 ```
 python3 -m venv venv
 .\venv\Scripts\activate.bat
 ```
 
-<br>
+### Install dependencies
 
-#### - Install dependencies
 ```
 pip install --upgrade pip
 pip install -r requirements.txt
 ```
 
-<br>
+### Migrate to database
 
-#### - Migrate to database
 ```
 python manage.py migrate
 python manage.py createsuperuser
 ```
 
-<br>
+### Run application
 
-#### - Run application
 ```
 python manage.py runserver
 ```
-
-<br>
-
-#### - Generate Secret Key ( ! Important for deployment ! )
-```
-python manage.py shell
-from django.core.management.utils import get_random_secret_key
-print(get_random_secret_key())
-exit()
-```
-
-
-# realtime-chat
